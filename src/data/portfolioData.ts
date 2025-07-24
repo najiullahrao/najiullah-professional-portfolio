@@ -3,9 +3,9 @@ import { PortfolioData } from '@/types/portfolio';
 export const portfolioData: PortfolioData = {
   name: "Najiullah Rao",
   tagline: "Building scalable and impactful digital experiences",
-  headline: "Full-Stack Web Developer & Mobile App Developer",
+  headline: "Full-Stack Web & Mobile App Developer",
   avatar: "/images/avatar-placeholder.jpeg",
-  contactEmail: "najiullahrao@gmail.com", // change if needed
+  contactEmail: "najiullah.rao@gmail.com", 
   robotAnimationPath: "/animations/robot-waving.json",
   
   aboutMe: [
@@ -41,8 +41,9 @@ export const portfolioData: PortfolioData = {
     { name: "HTML/CSS", proficiency: 95, category: "Frontend" },
     
     // Backend
-    { name: "Node.js", proficiency: 85, category: "Backend" },
-    { name: "Express.js", proficiency: 80, category: "Backend" },
+    { name: "Node.js", proficiency: 95, category: "Backend" },
+    { name: "TypeScript", proficiency: 85, category: "Backend" },
+    { name: "Express.js", proficiency: 85, category: "Backend" },
     { name: "Nest.js", proficiency: 75, category: "Backend" },
     { name: "REST APIs", proficiency: 90, category: "Backend" },
     

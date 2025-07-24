@@ -5,25 +5,30 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'John Doe - Full-Stack Developer & Mobile App Developer',
-  description: 'Professional portfolio of John Doe, a passionate full-stack developer specializing in React, Next.js, and React Native. Building digital experiences that matter.',
-  keywords: 'full-stack developer, web developer, mobile app developer, React, Next.js, TypeScript, portfolio',
-  authors: [{ name: 'John Doe' }],
-  creator: 'John Doe',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://johndoe-portfolio.vercel.app',
-    title: 'John Doe - Full-Stack Developer & Mobile App Developer',
-    description: 'Professional portfolio of John Doe, a passionate full-stack developer specializing in React, Next.js, and React Native.',
-    siteName: 'John Doe Portfolio',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'John Doe - Full-Stack Developer & Mobile App Developer',
-    description: 'Professional portfolio of John Doe, a passionate full-stack developer specializing in React, Next.js, and React Native.',
-    creator: '@johndoe',
-  },
+  title: 'Najiullah Rao - Full-Stack Web & Mobile App Developer',
+description:
+  'Portfolio of Najiullah Rao, a passionate full-stack developer specializing in React.js, Next.js, Node.js, and React Native. Building scalable web apps and mobile solutions that matter.',
+keywords:
+  'Najiullah Rao, full-stack developer, web developer, mobile app developer, React.js, Next.js, Node.js, React Native, portfolio',
+authors: [{ name: 'Najiullah Rao' }],
+creator: 'Najiullah Rao',
+openGraph: {
+  type: 'website',
+  locale: 'en_US',
+  url: 'https://najiullah-portfolio.vercel.app',
+  title: 'Najiullah Rao - Full-Stack Web & Mobile App Developer',
+  description:
+    'Portfolio of Najiullah Rao, a passionate full-stack developer specializing in React.js, Next.js, Node.js, and React Native. Building scalable web apps and mobile solutions that matter.',
+  siteName: 'Najiullah Rao Portfolio',
+},
+twitter: {
+  card: 'summary_large_image',
+  title: 'Najiullah Rao - Full-Stack Web & Mobile App Developer',
+  description:
+    'Portfolio of Najiullah Rao, a passionate full-stack developer specializing in React.js, Next.js, Node.js, and React Native.',
+  creator: '@RaoNaji11536',
+},
+
   robots: {
     index: true,
     follow: true,

@@ -82,7 +82,7 @@ export default function About() {
               {/* Social Links */}
               <motion.div variants={itemVariants} className="mt-8">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Let's Connect
+                  Let&apos;s Connect
                 </h3>
                 <div className="flex space-x-4">
                   {portfolioData.socialLinks.map((link) => (
@@ -115,7 +115,7 @@ export default function About() {
               </h3>
               
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {keyTechnologies.map((tech, index) => (
+                {keyTechnologies.map((tech) => (
                   <motion.div
                     key={tech}
                     variants={itemVariants}

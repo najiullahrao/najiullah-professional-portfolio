@@ -41,13 +41,13 @@ export default function Projects() {
             </h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Here are some of the projects I've worked on that showcase my skills and experience
+              Here are some of the projects I&apos;ve worked on that showcase my skills and experience
             </p>
           </motion.div>
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {portfolioData.projects.map((project, index) => (
+            {portfolioData.projects.map((project) => (
               <motion.div key={project.title} variants={itemVariants}>
                 <Card className="overflow-hidden group">
                   {/* Project Image */}

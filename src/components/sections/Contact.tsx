@@ -57,7 +57,7 @@ export default function Contact() {
       } else {
         throw new Error('Failed to send message');
       }
-    } catch (error) {
+    } catch {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again or contact me directly.'
@@ -100,7 +100,7 @@ export default function Contact() {
             </h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Have a project in mind or want to collaborate? I'd love to hear from you!
+              Have a project in mind or want to collaborate? I&apos;d love to hear from you!
             </p>
           </motion.div>
 
@@ -108,12 +108,12 @@ export default function Contact() {
             {/* Contact Info */}
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Let's Start a Conversation
+                Let&apos;s Start a Conversation
               </h3>
               
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  I'm always interested in new opportunities, whether it's a full-time position, 
+                  I&apos;m always interested in new opportunities, whether it&apos;s a full-time position, 
                   freelance project, or just a chat about technology and development.
                 </p>
 

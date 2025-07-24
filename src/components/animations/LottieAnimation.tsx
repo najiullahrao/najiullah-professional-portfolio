@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import Lottie, { LottieRefCurrentProps } from 'lottie-react';
+import { useEffect, useState } from 'react';
+import Lottie from 'lottie-react';
 
 interface LottieAnimationProps {
-  animationData?: any;
+  animationData?: object;
   animationPath?: string;
   loop?: boolean;
   autoplay?: boolean;
@@ -20,7 +20,7 @@ export default function LottieAnimation({
   className = '',
   style = {}
 }: LottieAnimationProps) {
-  const lottieRef = useRef<LottieRefCurrentProps>(null);
+  const [loadedAnimationData, setLoadedAnimationData] = useState<object | null>(null);
 
   useEffect(() => {
     if (animationPath && !animationData) {
@@ -28,9 +28,7 @@ export default function LottieAnimation({
       fetch(animationPath)
         .then(response => response.json())
         .then(data => {
-          if (lottieRef.current) {
-            lottieRef.current.loadAnimation(data);
-          }
+          setLoadedAnimationData(data);
         })
         .catch(error => {
           console.error('Error loading Lottie animation:', error);
@@ -38,11 +36,13 @@ export default function LottieAnimation({
     }
   }, [animationPath, animationData]);
 
-  if (animationData) {
+  // Use either provided animationData or dynamically loaded data
+  const currentAnimationData = animationData || loadedAnimationData;
+
+  if (currentAnimationData) {
     return (
       <Lottie
-        ref={lottieRef}
-        animationData={animationData}
+        animationData={currentAnimationData}
         loop={loop}
         autoplay={autoplay}
         className={className}
@@ -51,15 +51,13 @@ export default function LottieAnimation({
     );
   }
 
-  if (animationPath) {
+  // Show loading state while fetching animation data
+  if (animationPath && !loadedAnimationData) {
     return (
       <div className={className} style={style}>
-        <Lottie
-          ref={lottieRef}
-          loop={loop}
-          autoplay={autoplay}
-          className="w-full h-full"
-        />
+        <div className="flex items-center justify-center w-full h-full">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+        </div>
       </div>
     );
   }
